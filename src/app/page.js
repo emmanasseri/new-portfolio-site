@@ -18,6 +18,7 @@ function Home() {
           spacing={0}
           align="stretch"
           justifyContent="flex-start"
+          overflow="auto"
         >
           <Signature_PFP />
           <Lamp_Frame />
