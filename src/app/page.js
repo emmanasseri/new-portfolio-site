@@ -1,24 +1,29 @@
 "use client";
-import { Box, HStack } from "@chakra-ui/react";
+import { VStack, ChakraProvider } from "@chakra-ui/react";
 import RootLayout from "./layout";
+
 import Signature_PFP from "@/components/Signature_PFP";
-import { ChakraProvider } from "@chakra-ui/react";
+import Lamp_Frame from "@/components/Lamp_Frame";
+import Bookshelf_Commits from "@/components/Bookshelf_Commits";
+import Lights_Desk from "@/components/Lights_Desk";
 
 function Home() {
   return (
     <RootLayout>
       <ChakraProvider>
-        <Box
+        <VStack
           width="100vw"
-          height="calc(100vw * (5760 / 2880))"
-          display="flex"
-          flexDirection="column"
+          height="100vh"
+          spacing={0}
+          align="stretch"
           justifyContent="flex-start"
-          alignItems="center"
-          bg="#adb28a"
+          //bg="#adb28a"
         >
           <Signature_PFP />
-        </Box>
+          <Lamp_Frame />
+          <Bookshelf_Commits />
+          <Lights_Desk />
+        </VStack>
       </ChakraProvider>
     </RootLayout>
   );
