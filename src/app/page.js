@@ -1,33 +1,26 @@
-// src/app/page.js
-
-import { Box } from "@chakra-ui/react";
-import Layout from "./layout";
+"use client";
+import { Box, HStack } from "@chakra-ui/react";
+import RootLayout from "./layout";
+import Signature_PFP from "@/components/Signature_PFP";
+import { ChakraProvider } from "@chakra-ui/react";
 
 function Home() {
   return (
-    <Layout>
-      <Box
-        width="100vw"
-        height="calc(100vw * (5760 / 2880))"
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        bg="#adb28a"
-      >
+    <RootLayout>
+      <ChakraProvider>
         <Box
-          width="80%"
-          height="80%"
+          width="100vw"
+          height="calc(100vw * (5760 / 2880))"
           display="flex"
-          justifyContent="center"
+          flexDirection="column"
+          justifyContent="flex-start"
           alignItems="center"
-          bg="white"
-          borderRadius="md"
-          boxShadow="xl"
+          bg="#adb28a"
         >
-          <h1>Your Content Here</h1>
+          <Signature_PFP />
         </Box>
-      </Box>
-    </Layout>
+      </ChakraProvider>
+    </RootLayout>
   );
 }
 

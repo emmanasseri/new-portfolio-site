@@ -1,19 +1,19 @@
-import { Inter } from "next/font/google";
-import Chakra from "./chakra";
+"use client";
 
-const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({ children }) {
+const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <head>
-        {/* You can include meta tags, title, and other head elements here */}
         <title>Emma Nasseri</title>
-        <description>Emma Nasseri's portfolio</description>
+        <meta name="description" content="Emma Nasseri's portfolio" />
+        {/* Include any global styles here */}
       </head>
-      <body>
-        <Chakra>{children}</Chakra>
-      </body>
+    
+        <body>{children}</body>
+
     </html>
   );
-}
+};
+
+export default RootLayout;
