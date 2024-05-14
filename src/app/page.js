@@ -4,9 +4,10 @@ import RootLayout from "./layout";
 import Chakra from "./chakra";
 
 import Signature_PFP from "@/components/Signature_PFP";
-import Lamp_Frame from "@/components/Lamp_Frame";
-import Bookshelf_Commits from "@/components/Bookshelf_Commits";
+import Commits from "@/components/Commits";
 import Lights_Desk from "@/components/Lights_Desk";
+import Bookshelf from "@/components/Bookshelf";
+import About_Frame from "@/components/About_Frame";
 
 function Home() {
   return (
@@ -14,15 +15,15 @@ function Home() {
       <Chakra>
         <VStack
           width="100vw"
-          height="100vh"
-          spacing={0}
+          spacing={2}
           align="stretch"
           justifyContent="flex-start"
           overflow="auto"
         >
           <Signature_PFP />
-          <Lamp_Frame />
-          <Bookshelf_Commits />
+          <About_Frame />
+          <Commits />
+          <Bookshelf />
           <Lights_Desk />
         </VStack>
       </Chakra>
