@@ -13,6 +13,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const isMobile = useBreakpointValue({ base: true, md: false });
+  console.log(isMobile);
 
   const handleToggle = () => setIsOpen(!isOpen);
 
