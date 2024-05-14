@@ -9,16 +9,15 @@ import RootLayout from "../layout";
 import Chakra from "../chakra";
 import Footer from "@/components/Footer";
 import Desktop from "@/components/coding/Desktop";
+import TerminalCard from "@/components/coding/TerminalCard";
 
 export default function CSPage() {
-  const folders = [
+  const projects = [
     { label: "Go to Documents", href: "#documentsSection" },
     { label: "Projects", href: "#projectsSection" },
     { label: "Music", href: "#musicSection" },
     // Add more folders as needed
   ];
-
-  <Desktop folders={folders} />;
 
   return (
     <>
@@ -26,7 +25,8 @@ export default function CSPage() {
         <Chakra>
           <Navbar />
           <Box>
-            <Desktop folders={folders} />
+            <Desktop folders={projects} />
+            <TerminalCard label="Terminal" href="/coding/terminal" />
           </Box>
           <Footer />
         </Chakra>
