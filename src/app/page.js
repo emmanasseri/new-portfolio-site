@@ -2,6 +2,8 @@
 import { VStack } from "@chakra-ui/react";
 import RootLayout from "./layout";
 import Chakra from "./chakra";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 import Signature_PFP from "@/components/Signature_PFP";
 import Commits from "@/components/Commits";
@@ -13,6 +15,7 @@ function Home() {
   return (
     <RootLayout>
       <Chakra>
+        <Navbar />
         <VStack
           width="100vw"
           spacing={2}
@@ -26,6 +29,7 @@ function Home() {
           <Bookshelf />
           <Lights_Desk />
         </VStack>
+        <Footer />
       </Chakra>
     </RootLayout>
   );

@@ -4,10 +4,10 @@ import Image from "next/image";
 export default function About_Frame() {
   return (
     <Box
-      width="90vw"
+      width="100vw"
       position="relative"
-      margin="10px auto"
       overflow="hidden"
+      minH="500px"
       _before={{
         content: '""',
         display: "block",
@@ -41,7 +41,7 @@ export default function About_Frame() {
           alignItems="center"
           textAlign="center"
         >
-          <Text fontSize={["xl", "2xl", "4xl"]} color="black" fontWeight="bold">
+          <Text fontSize={["lg", "xl", "3xl"]} color="black" fontWeight="bold">
             Welcome to my digital portfolio! The design of this page was
             inspired by the work area in my apartment, where I created this site
             and many other projects featured here. Scroll down to see my

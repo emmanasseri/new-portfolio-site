@@ -14,7 +14,7 @@ export default function Lights_Desk() {
         src="/assets/homepage/desk_and_lights.png"
         alt="Desk and lights"
         layout="fill" // Image will fill the parent Box
-        objectFit="cover" // Image will cover the area, cropping if necessary
+        objectFit="contain" // Ensures the entire image fits within the box without cropping
         quality={75} // Optionally reduce quality for better performance
       />
     </Box>
