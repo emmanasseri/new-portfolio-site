@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Image, Text, Grid } from "@chakra-ui/react";
 import FolderButton from "./FolderButton";
+import Projects from "./Projects";
 
 const Desktop = ({ folders }) => {
   return (
@@ -38,6 +39,7 @@ const Desktop = ({ folders }) => {
       >
         my computer
       </Text>
+
     </Box>
   );
 };

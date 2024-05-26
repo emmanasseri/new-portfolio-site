@@ -1,14 +1,13 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import Image from "next/image";
 
 export default function Bookshelf() {
   return (
     <Box
-      width="90vw"
+      flex={1} // Allow the box to grow as needed
       position="relative"
-      margin="10px auto"
+      margin="300px 10px 10px 10px" // Increase bottom margin to push the component lower
       overflow="hidden"
-      bg={"#f5f5f5"}
       _before={{
         content: '""',
         display: "block",
@@ -21,14 +20,14 @@ export default function Bookshelf() {
         left="0"
         right="0"
         bottom="0"
-        overflow="hidden" // Ensures nothing spills outside the container
+        overflow="hidden"
       >
         <Image
           src="/assets/homepage/lower_shelf.png"
           alt="lower shelf"
           layout="fill"
-          objectFit="none" // Override to 'none' to allow repositioning without scaling
-          style={{ position: "absolute", bottom: 0 }} // Align image to the bottom
+          objectFit="contain" // Changed to 'contain' to prevent excessive cropping
+          style={{ position: "absolute", bottom: 0 }}
         />
       </Box>
     </Box>

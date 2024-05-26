@@ -4,14 +4,14 @@ import Image from "next/image";
 export default function Commits() {
   return (
     <Box
-      width="100vw" // Set width to 100% of the viewport width
+      flex={1} // Allow the box to grow as needed
       position="relative"
-      margin="30px auto"
-      overflow="hidden" // Ensures no spillover
+      margin="10px 10px 200px 10px" // Increase top margin to push the component higher
+      overflow="hidden"
       _before={{
         content: '""',
         display: "block",
-        paddingTop: "56.25%", // Padding top for 16:9 aspect ratio (100 * 9 / 16)
+        paddingTop: "56.25%",
       }}
     >
       <Image
@@ -21,19 +21,16 @@ export default function Commits() {
         objectFit="contain"
       />
       <Box
-        position="absolute" // Set this to absolute to overlay on the frame image
-        top="0" // Start at the top of the parent box
-        left="0" // Start at the left of the parent box
-        right="0" // Extend to the right of the parent box
-        bottom="0" // Extend to the bottom of the parent box
+        position="absolute"
         display="flex"
         justifyContent="center"
         alignItems="center"
+        inset="0"
       >
         <img
           src="http://ghchart.rshah.org/409ba5/emmanasseri"
           alt="emmanasseri's Github chart"
-          style={{ maxWidth: "200%", maxHeight: "200%" }} // Adjust size accordingly
+          style={{ maxWidth: "80%", maxHeight: "200%" }}
         />
       </Box>
     </Box>

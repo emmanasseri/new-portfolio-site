@@ -1,13 +1,14 @@
-"use client";
-import { VStack } from "@chakra-ui/react";
+import { VStack, Flex, useBreakpointValue } from "@chakra-ui/react";
 
 import Signature_PFP from "@/components/homepage/Signature_PFP";
-import Commits from "@/components/homepage/Commits";
 import Lights_Desk from "@/components/homepage/Lights_Desk";
 import Bookshelf from "@/components/homepage/Bookshelf";
 import About_Frame from "@/components/homepage/About_Frame";
+import Commits from "@/components/homepage/Commits";
 
 function Homepage() {
+  const direction = useBreakpointValue({ base: "column", md: "row" });
+
   return (
     <VStack
       width="100vw"
@@ -18,8 +19,15 @@ function Homepage() {
     >
       <Signature_PFP />
       <About_Frame />
-      <Commits />
-      <Bookshelf />
+      <Flex
+        direction={direction}
+        width="100vw"
+        align="stretch"
+        justify="space-around"
+      >
+        <Bookshelf />
+        <Commits />
+      </Flex>
       <Lights_Desk />
     </VStack>
   );
